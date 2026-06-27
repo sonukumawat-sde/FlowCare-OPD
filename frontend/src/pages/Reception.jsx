@@ -29,11 +29,11 @@ const Reception = () => {
   const [symptoms, setSymptoms] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const API_URL = 'http://localhost:5000/api';
+  const API_URL = 'https://flowcare-opd.onrender.com/api';
 
   useEffect(() => {
     fetchQueueStatus();
-    const socket = io('http://localhost:5000');
+    const socket = io('https://flowcare-opd.onrender.com');
     
     socket.on('queueUpdated', fetchQueueStatus);
     socket.on('callNext', (data) => {

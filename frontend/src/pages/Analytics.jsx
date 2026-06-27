@@ -23,7 +23,7 @@ const Analytics = () => {
   // 🚀 NAYA: "View All" ke liye state
   const [showAllLogs, setShowAllLogs] = useState(false);
 
-  const API_URL = 'http://localhost:5000/api';
+  const API_URL = 'https://flowcare-opd.onrender.com/api';
 
   useEffect(() => {
     const fetchAnalytics = async () => {

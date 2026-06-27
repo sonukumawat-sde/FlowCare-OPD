@@ -12,7 +12,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   
   const navigate = useNavigate();
-  const API_URL = 'http://localhost:5000/api/auth';
+  const API_URL = 'https://flowcare-opd.onrender.com/api/auth';
 
   const handleSubmit = async (e) => {
     e.preventDefault();

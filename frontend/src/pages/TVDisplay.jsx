@@ -12,7 +12,7 @@ const TVDisplay = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [soundEnabled, setSoundEnabled] = useState(true);
 
-  const API_URL = 'http://localhost:5000/api';
+  const API_URL = 'https://flowcare-opd.onrender.com/api';
 
   useEffect(() => {
     window.speechSynthesis.getVoices();
@@ -26,7 +26,7 @@ const TVDisplay = () => {
 
   useEffect(() => {
     fetchQueueStatus();
-    const socket = io('http://localhost:5000');
+    const socket = io('https://flowcare-opd.onrender.com');
 
     socket.on('queueUpdated', fetchQueueStatus);
     
